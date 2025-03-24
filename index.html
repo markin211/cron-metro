@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/cronometro/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Knewave&family=Monomakh&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <nav>
+        <div class="logoname">
+            <h1><a href="/sites/Home.html" style="color: white;">BuskRefs</a></h1>
+            <form id="search-form" class="search-form" onsubmit="return handleSearch(event)">
+                <input type="text" id="search-input" placeholder="buskar">
+                <button type="submit">🚌car</button>
+            </form>
+       </div>
+     <div>
+        <a  class="login" href="/sites/login.html">
+            <img width="50" height="50" src="https://img.icons8.com/ios/50/test-account.png" alt="test-account"/>
+        </a>
+    </div>
+    </nav>
+    </header>
+    <main>
+        <section>
+    <div class="contagem">
+        <div class="roda" id="dias"> <canvas></canvas> <span>0</span> <p>dias</p></div>
+        <div class="roda" id="horas"> <canvas></canvas> <span>0</span> <p>hroas</p></div>
+        <div class="roda" id="minutos"> <canvas></canvas> <span>0</span> <p>minutos</p></div>
+        <div class="roda" id="segundos"> <canvas></canvas> <span>0</span> <p>segundos</p></div>
+    </div>
+    <br>
+    <br>
+    <div class="controladores">
+        <input class="input" type="number" id="tempoa" placeholder="Segundos">
+        <button onclick="ajustarTempo(1)">Avançar</button>
+        <button onclick="ajustarTempo(-1)">Retroceder</button>
+        <button onclick="alternarTempo()">Play/Pause</button>
+        <button onclick="resetarTempo()">Zerar</button>
+    </div>
+    
+    <div class="tempo">
+        <div class="roda" id="tempo_minutos"> <canvas></canvas> <span>0</span> <span></span><p>minutos</p></span> </div>
+        <div class="roda" id="tempo_segundos"> <canvas></canvas> <span>0</span> <span></span><p>segundos</p></span> </div>
+    </div>
+    <br>
+    <br>
+    <div class="controladores">
+        <button onclick="alternarCronômetro()">Iniciar/Pausar</button>
+        <button onclick="redefinircronometro()">Zerar</button>
+    </div>
+</section>
+</main>
+<footer>
+    <a>Desenvolvido por <href href="/sites/Home.html">©BuskRefs</href></a>
+</footer>
+    <script src="/cronometro/script.js"></script>
+    <br>
+</body>
+</html>
